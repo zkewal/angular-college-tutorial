@@ -1,0 +1,20 @@
+Search Wikipedia: <input [(ngModel)]="searchKeyword"/>
+<button (click)="searchWikipedia()">Submit</button>
+<br>
+
+<div *ngIf="showLoadingData === true">
+  <br>
+  loading data...
+</div>
+<ul *ngIf="showLoadingData === false">
+  <li *ngFor="let article of articleList">
+    <span style="font-weight:900">{{article.title}}:</span>
+    <br>
+    <img [src]="article.thumbnail"/>
+    <br>
+    {{article.content}}
+    <br>
+    <br>
+  </li>
+</ul>
+<!-- {{articleList | json}} -->

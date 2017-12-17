@@ -1,0 +1,6 @@
+<ul>
+	<li *ngFor="let item of list">
+		<a [routerLink]="'/students/' + item.id" routerLinkActive="active">{{item.id}} : {{item.name}}</a>
+		<!-- <button (click)= "navigateToStudentView(item.id)">View</button> -->
+	</li>
+</ul>
